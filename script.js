@@ -533,7 +533,7 @@ const orderedSites = [
         `,
 
         image:
-            "images/OtherEarthDayendOfday.webp",
+            "images/OtherEarthDayendOFday.webp",
 
         caption:
             "Volunteers come together at Filter Forest to plant trees, restore the landscape, and help transform vacant parcels into a thriving neighborhood green space."
