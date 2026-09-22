@@ -209,24 +209,12 @@ p {
 
 .history-slide {
     display: grid;
-    grid-template-columns: 0.8fr 1.5fr;
-    gap: 60px;
+    grid-template-columns: minmax(300px, 0.9fr) minmax(340px, 1.45fr);
+    gap: 40px;
     align-items: center;
 
+    min-height: 88vh;
     padding: 45px 6%;
-}
-
-.history-slide > img {
-    width: 100%;
-    height: auto;
-    max-height: 82vh;
-
-    object-fit: contain;
-
-    grid-column: 2;
-    grid-row: 1;
-
-    transform: none;
 }
 
 .history-slide .left-overlay {
@@ -242,6 +230,25 @@ p {
 
     grid-column: 1;
     grid-row: 1;
+
+    align-self: stretch;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.history-slide > img {
+    width: 100%;
+    height: auto;
+    max-height: 78vh;
+
+    object-fit: contain;
+
+    grid-column: 2;
+    grid-row: 1;
+
+    transform: none;
 }
 
 .image-overlay-box h2 {
