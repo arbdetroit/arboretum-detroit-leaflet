@@ -875,29 +875,21 @@ p {
         min-height: 320px;
     }
 
-
     .community-story-image-wrapper img {
         min-height: 320px;
     }
-
 
     .community-story-card {
         padding: 30px 22px;
     }
 
-
     .community-story-controls {
         margin-top: 35px;
     }
-
 
     .story-arrow {
         width: 42px;
         height: 42px;
     }
 
-}
-    .final-collage-section {
-        min-height: auto;
-    }
 }
