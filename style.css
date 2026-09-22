@@ -205,6 +205,45 @@ p {
     transform: translateY(-50%);
 }
 
+/* WHY DETROIT LAYOUT */
+
+.history-slide {
+    display: grid;
+    grid-template-columns: 0.8fr 1.5fr;
+    gap: 60px;
+    align-items: center;
+
+    padding: 45px 6%;
+}
+
+.history-slide > img {
+    width: 100%;
+    height: auto;
+    max-height: 82vh;
+
+    object-fit: contain;
+
+    grid-column: 2;
+    grid-row: 1;
+
+    transform: none;
+}
+
+.history-slide .left-overlay {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    width: 100%;
+    margin: 0;
+
+    transform: none;
+
+    grid-column: 1;
+    grid-row: 1;
+}
+
 .image-overlay-box h2 {
     margin-top: 0;
     font-size: clamp(2rem, 4vw, 3.7rem);
