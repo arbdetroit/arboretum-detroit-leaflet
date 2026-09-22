@@ -1,15 +1,11 @@
-// =====================================================
 // CREATE THE LEAFLET MAP
-// =====================================================
 
 const map = L.map("map", {
     scrollWheelZoom: true
 }).setView([42.373, -83.055], 14);
 
 
-// =====================================================
 // BASEMAPS
-// =====================================================
 
 const streetMap = L.tileLayer(
     "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
@@ -38,9 +34,7 @@ L.control.layers(
 ).addTo(map);
 
 
-// =====================================================
 // PAGE ELEMENTS
-// =====================================================
 
 const siteTitle =
     document.getElementById("site-title");
@@ -55,9 +49,7 @@ const siteNavigation =
     document.getElementById("site-navigation");
 
 
-// =====================================================
 // EXACT PROJECT-SITE ORDER, TEXT, IMAGES, AND CAPTIONS
-// =====================================================
 
 const orderedSites = [
 
@@ -541,21 +533,17 @@ const orderedSites = [
 ];
 
 
-// =====================================================
 // MAP STATE
-// =====================================================
 
 const siteObjects = [];
 
 let activeButton = null;
 
 
-// =====================================================
 // NORMALIZE SITE NAMES
 //
 // This removes capitalization, punctuation, spaces,
 // hyphens, and apostrophes so names match more easily.
-// =====================================================
 
 function normalizeSiteName(name) {
     return String(name || "")
@@ -566,9 +554,7 @@ function normalizeSiteName(name) {
 }
 
 
-// =====================================================
 // GET SITE NAME FROM GEOJSON
-// =====================================================
 
 function getGeoJsonSiteName(feature) {
     const properties =
@@ -586,9 +572,7 @@ function getGeoJsonSiteName(feature) {
 }
 
 
-// =====================================================
 // DETERMINE WHETHER A FEATURE MATCHES A SITE
-// =====================================================
 
 function featureMatchesSite(feature, site) {
     const geoJsonName =
@@ -613,9 +597,7 @@ function featureMatchesSite(feature, site) {
 }
 
 
-// =====================================================
 // UPDATE THE INFORMATION PANEL
-// =====================================================
 
 function updateSitePanel(site) {
     siteTitle.textContent =
@@ -679,9 +661,7 @@ function updateSitePanel(site) {
 }
 
 
-// =====================================================
 // SET THE ACTIVE BUTTON
-// =====================================================
 
 function setActiveButton(button) {
     if (activeButton) {
@@ -696,9 +676,7 @@ function setActiveButton(button) {
 }
 
 
-// =====================================================
 // SELECT A SITE
-// =====================================================
 
 function selectSite(siteObject) {
     updateSitePanel(
@@ -729,9 +707,7 @@ function selectSite(siteObject) {
 }
 
 
-// =====================================================
 // LOAD THE GEOJSON
-// =====================================================
 
 fetch("data/ArbDetroit_Sites.geojson")
 
